@@ -6,19 +6,14 @@ def convert_to_decimal():
     hex3 = entry_hex3.get()
 
     try:
-        decimal1 = int(hex1, 16)
-        decimal2 = int(hex2, 16)
-        decimal3 = int(hex3, 16)
+        ModuleID = int(hex1, 16)
+        ApiID = int(hex2, 16)
+        ErrorID = int(hex3, 16)
 
-        entry_decimal1.delete(0, tk.END)
-        entry_decimal2.delete(0, tk.END)
-        entry_decimal3.delete(0, tk.END)
-
-        entry_decimal1.insert(0, str(decimal1))
-        entry_decimal2.insert(0, str(decimal2))
-        entry_decimal3.insert(0, str(decimal3))
-
-        result_label.config(text="")
+        #Test...
+        print(ModuleID)
+        print(ApiID)
+        print(ErrorID)
 
     except ValueError:
         result_label.config(text="Invalid hexadecimal input. Please enter valid hex numbers.")
